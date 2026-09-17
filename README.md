@@ -1,6 +1,6 @@
 # 🚀 Engineering Interview Learning Hub
 
-> **8 Specialized Tracks · 18 Comprehensive Guides & Quizzes · 990+ Explained Answers · 650+ Interactive Quiz Questions · 220+ Architectural Flow Diagrams · 14 Visual Labs · 100% Offline-Ready**
+> **8 Specialized Tracks · 19 Comprehensive Guides & Quizzes · 1,140+ Explained Answers · 650+ Interactive Quiz Questions · 370+ Architectural Flow Diagrams · 22 Visual Labs · 100% Offline-Ready**
 
 Welcome to the **Engineering Interview Learning Hub**, an offline-first repository of in-depth study guides, scenario-based design workbooks, and interactive practice/mock assessment quizzes designed for senior software engineers, technical leads, and distributed systems architects.
 
@@ -15,7 +15,7 @@ Welcome to the **Engineering Interview Learning Hub**, an offline-first reposito
 | **🟢 Node.js Systems** | [nodejs_interview_guide.html](nodejs_interview_guide.html) | [nodejs_100_question_quiz.html](nodejs_100_question_quiz.html) | [nodejs_visual_atlas.html](nodejs_visual_atlas.html) | 100 Guide Qs · 100 Quiz Qs · 37 Diagrams |
 | **⚛️ React 19 Architecture** | [react_interview_guide.html](react_interview_guide.html) | [react_interview_quiz.html](react_interview_quiz.html) | *Embedded in guide* | 100 Guide Qs · 100 Quiz Qs · React 19.3 |
 | **💛 JavaScript Core** | [senior_javascript_study_guide.html](senior_javascript_study_guide.html) | [senior_javascript_quiz_100.html](senior_javascript_quiz_100.html) | *Embedded in guide* | 100 Guide Qs · 100 Quiz Qs · Core Semantics |
-| **🎨 Senior Frontend** | [senior_frontend_interview_100.html](senior_frontend_interview_100.html) | *Built-in to guide* | *Embedded in guide* | 100 Questions + 6 Coding Solutions |
+| **🎨 Senior Frontend** | [senior_frontend_interview_100.html](senior_frontend_interview_100.html) | *Built-in to guide* | [frontend_interview_atlas_150.html](frontend_interview_atlas_150.html) | 250 Questions · 8 Visual Labs · 6 Coding Solutions |
 | **⚙️ Backend & DevOps** | [senior_backend_devops_study_guide_illustrated.html](senior_backend_devops_study_guide_illustrated.html) | [senior_backend_devops_quiz_illustrated.html](senior_backend_devops_quiz_illustrated.html) | *Embedded in guide* | 100 Answers · 100 Quiz Qs · 50 Diagrams |
 | **📐 System Design** | [system_design_guide.html](system_design_guide.html) | [system_design_quiz.html](system_design_quiz.html) | *Embedded in guide* | 80 Scenarios · 50 Quiz Qs · Visual Flows |
 
@@ -37,7 +37,7 @@ Open [index.html](index.html) in any browser to launch the central dashboard:
 Every guide and quiz includes the universal navigation bar (`site-nav.css` and `site-nav.js`):
 
 - **`⌂ Learning Hub`**: Instant link back to [index.html](index.html).
-- **`📚 All Tracks ▾` Switcher**: Open a searchable drawer listing all 18 modules from any page.
+- **`📚 All Tracks ▾` Switcher**: Open a searchable drawer listing all 19 modules from any page.
 - **Keyboard Shortcuts**:
   - `Ctrl + K` (or `Cmd + K`): Open/close the quick track navigator from any page.
   - `/`: Focus search input in the Learning Hub dashboard or navigator.
@@ -119,7 +119,8 @@ python scripts/verify_links.py
 
 ### 6. Senior Frontend Engineering Track
 - **Guide & Quiz**: [senior_frontend_interview_100.html](senior_frontend_interview_100.html) (100 Questions + 6 Coding Solutions)
-- **Key Focus**: Core Web Vitals (INP, LCP, CLS), browser rendering pipeline, layout thrashing, DOM optimization, frontend security (CSP, CORS, sanitization), and coding solutions.
+- **Visual Atlas & Labs**: [frontend_interview_atlas_150.html](frontend_interview_atlas_150.html) (150 Scenario Questions + 150 Visual Explanations + 8 Concept Labs)
+- **Key Focus**: Core Web Vitals (INP, LCP, CLS), browser rendering pipeline, layout thrashing, DOM optimization, React 19 / Next.js 16 / Tailwind 4 architecture, CSS container queries & stacking contexts, frontend security (CSP, CORS, sanitization), and coding solutions.
 
 ### 7. Senior Backend & DevOps Track
 - **Guide**: [senior_backend_devops_study_guide_illustrated.html](senior_backend_devops_study_guide_illustrated.html) (100 Answers + 50 Diagrams)

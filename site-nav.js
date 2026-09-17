@@ -59,7 +59,8 @@
       name: 'Senior Frontend Engineering',
       icon: '🎨',
       items: [
-        { title: 'Senior Frontend Guide & Quiz', file: 'senior_frontend_interview_100.html', type: 'hybrid', badge: '100 Qs + Coding + Quiz' }
+        { title: 'Senior Frontend Guide & Quiz', file: 'senior_frontend_interview_100.html', type: 'hybrid', badge: '100 Qs + Coding + Quiz' },
+        { title: 'Frontend Interview Atlas', file: 'frontend_interview_atlas_150.html', type: 'atlas', badge: '150 Qs · 8 Labs' }
       ]
     },
     {
@@ -107,7 +108,10 @@
       return track.items.find(i => i.type === 'guide' || i.type === 'hybrid') || null;
     }
     if (currentItem.type === 'atlas') {
-      return track.items.find(i => i.type === 'guide') || null;
+      return track.items.find(i => i.type === 'guide' || i.type === 'hybrid') || null;
+    }
+    if (currentItem.type === 'hybrid') {
+      return track.items.find(i => i.type === 'atlas') || null;
     }
     return null;
   }
