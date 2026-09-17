@@ -5,6 +5,8 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
+    "build": "node -e \"console.log('Static site build ready')\"",
+    "vercel-build": "node -e \"console.log('Vercel static build ready')\"",
     "start": "npx -y serve -l 3000 .",
     "dev": "npx -y serve -l 3000 .",
     "serve:python": "python -m http.server 3000",
