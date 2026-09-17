@@ -12,7 +12,8 @@
       icon: '🌐',
       items: [
         { title: '120-Question Field Guide', file: 'Interview_Study_Guide.html', type: 'guide', badge: '120 Qs · 8 Diagrams' },
-        { title: '100-Question Practice Quiz', file: 'Interview_Quiz_100.html', type: 'quiz', badge: '100 Qs · 4 Tracks' }
+        { title: '100-Question Practice Quiz', file: 'Interview_Quiz_100.html', type: 'quiz', badge: '100 Qs · 4 Tracks' },
+        { title: 'Senior Fullstack Visual Labs', file: 'fullstack_interview_visual_guide.html', type: 'atlas', badge: '72 Qs · 6 Visual Labs' }
       ]
     },
     {
@@ -149,6 +150,24 @@
       rightHtml += `
         <a href="nodejs_visual_atlas.html" class="sln-action-btn" title="View 37 Node.js Visual Diagrams">
           🗺️ Visual Atlas
+        </a>
+      `;
+    }
+
+    // Additional Full-Stack Visual Labs button if on Full-Stack Guide or Quiz
+    if (track && track.id === 'fullstack' && item && item.type !== 'atlas') {
+      rightHtml += `
+        <a href="fullstack_interview_visual_guide.html" class="sln-action-btn" title="View 6 Visual Labs & Field Guide">
+          🗺️ Visual Labs
+        </a>
+      `;
+    }
+
+    // Additional 100-Question Quiz button if on Full-Stack Visual Guide
+    if (track && track.id === 'fullstack' && item && item.type === 'atlas') {
+      rightHtml += `
+        <a href="Interview_Quiz_100.html" class="sln-action-btn" title="Take 100-Question Quiz">
+          📝 100-Q Quiz
         </a>
       `;
     }

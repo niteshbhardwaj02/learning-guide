@@ -1,6 +1,6 @@
 # 🚀 Engineering Interview Learning Hub
 
-> **8 Specialized Tracks · 16 Comprehensive Guides & Quizzes · 800+ Explained Answers · 650+ Interactive Quiz Questions · 100+ Architectural Flow Diagrams · 100% Offline-Ready**
+> **8 Specialized Tracks · 17 Comprehensive Guides & Quizzes · 870+ Explained Answers · 650+ Interactive Quiz Questions · 100+ Architectural Flow Diagrams · 6 Visual Labs · 100% Offline-Ready**
 
 Welcome to the **Engineering Interview Learning Hub**, an offline-first repository of in-depth study guides, scenario-based design workbooks, and interactive practice/mock assessment quizzes designed for senior software engineers, technical leads, and distributed systems architects.
 
@@ -10,7 +10,7 @@ Welcome to the **Engineering Interview Learning Hub**, an offline-first reposito
 
 | Domain Track | 📖 Study Guide | 📝 Interactive Quiz | 🗺️ Visual Atlas | Scope & Assets |
 |---|---|---|---|---|
-| **🌐 Full-Stack Interview** | [Interview_Study_Guide.html](Interview_Study_Guide.html) | [Interview_Quiz_100.html](Interview_Quiz_100.html) | *Embedded in guide* | 120 Guide Qs · 100 Quiz Qs · 8 Flows |
+| **🌐 Full-Stack Interview** | [Interview_Study_Guide.html](Interview_Study_Guide.html) | [Interview_Quiz_100.html](Interview_Quiz_100.html) | [fullstack_interview_visual_guide.html](fullstack_interview_visual_guide.html) | 120 Guide Qs · 100 Quiz Qs · 72 Lab Qs · 6 Visual Labs |
 | **🤖 AI & LLM Systems** | [ai_interview_guide.html](ai_interview_guide.html) | [ai_interview_quiz_100.html](ai_interview_quiz_100.html) | *Embedded in guide* | 100 Guide Qs · 100 Quiz Qs · Architectures |
 | **🟢 Node.js Systems** | [nodejs_interview_guide.html](nodejs_interview_guide.html) | [nodejs_100_question_quiz.html](nodejs_100_question_quiz.html) | [nodejs_visual_atlas.html](nodejs_visual_atlas.html) | 100 Guide Qs · 100 Quiz Qs · 37 Diagrams |
 | **⚛️ React 19 Architecture** | [react_interview_guide.html](react_interview_guide.html) | [react_interview_quiz.html](react_interview_quiz.html) | *Embedded in guide* | 100 Guide Qs · 100 Quiz Qs · React 19.3 |
@@ -93,7 +93,8 @@ python scripts/verify_links.py
 ### 1. Full-Stack Interview Track
 - **Guide**: [Interview_Study_Guide.html](Interview_Study_Guide.html) (120 Questions)
 - **Quiz**: [Interview_Quiz_100.html](Interview_Quiz_100.html) (100 Questions)
-- **Key Focus**: Node.js event mechanics, React render-vs-commit lifecycles, DORA metrics, OIDC, SLSA supply chain, and end-to-end request flows.
+- **Visual Labs**: [fullstack_interview_visual_guide.html](fullstack_interview_visual_guide.html) (72 Questions + 6 Interactive Labs)
+- **Key Focus**: Node.js event mechanics, React render-vs-commit lifecycles, stream backpressure, DORA metrics, OIDC, SLSA supply chain, interactive Event Loop simulator, RAG retrieval stages, and end-to-end request flows.
 
 ### 2. Artificial Intelligence & LLMs Track
 - **Guide**: [ai_interview_guide.html](ai_interview_guide.html) (100 Illustrated Answers)

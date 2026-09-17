@@ -28,6 +28,7 @@ EXPECTED_MODULES = [
     "Interview_Study_Guide.html",
     "ai_interview_guide.html",
     "ai_interview_quiz_100.html",
+    "fullstack_interview_visual_guide.html",
     "nodejs_100_question_quiz.html",
     "nodejs_interview_guide.html",
     "nodejs_visual_atlas.html",
