@@ -1,0 +1,28 @@
+{
+  "name": "engineering-interview-learning-hub",
+  "version": "1.0.0",
+  "description": "Comprehensive full-stack, AI, Node.js, React, DevOps, and System Design interview guides, quizzes, and visual atlases with 800+ answers and 650+ interactive quiz questions.",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "npx -y serve -l 3000 .",
+    "dev": "npx -y serve -l 3000 .",
+    "serve:python": "python -m http.server 3000",
+    "test": "python scripts/verify_links.py",
+    "verify": "python scripts/verify_links.py"
+  },
+  "keywords": [
+    "interview-guide",
+    "system-design",
+    "nodejs",
+    "react",
+    "javascript",
+    "devops",
+    "frontend",
+    "backend",
+    "ai",
+    "quiz"
+  ],
+  "author": "",
+  "license": "MIT"
+}

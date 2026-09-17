@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Learning Hub | 16 Interactive Interview Guides & Quizzes</title>
+  <meta name="description" content="Comprehensive engineering interview preparation hub with 800+ explained questions, 650+ interactive quiz items, 100+ diagrams, and offline-ready full-stack, AI, Node.js, React, DevOps, and System Design tracks.">
+  <link rel="stylesheet" href="site-nav.css">
+  <style>
+    :root {
+      --bg-dark: #070d1e;
+      --bg-darker: #040813;
+      --surface: #0e172e;
+      --surface-card: #131e3d;
+      --surface-card-hover: #18264e;
+      --surface-elevated: #1e2e5c;
+      --line: rgba(255, 255, 255, 0.09);
+      --line-bright: rgba(255, 255, 255, 0.18);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --accent: #4f46e5;
+      --accent-light: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --cyan: #06b6d4;
+      --cyan-glow: rgba(6, 182, 212, 0.2);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: var(--font-main);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at 50% 0%, #15224d 0%, #070d1e 70%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--accent-light);
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+
+    a:hover {
+      color: #a5b4fc;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Navigation Header */
+    .hub-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 13, 30, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .hub-header-inner {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .hub-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .hub-logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+    }
+
+    .hub-logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hub-logo-title {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hub-logo-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .hub-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hub-quick-nav-btn {
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--line-bright);
+      color: var(--text);
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .hub-quick-nav-btn:hover {
+      background: var(--surface-card);
+      border-color: var(--accent-light);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 60px 0 35px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 260px;
+      background: radial-gradient(ellipse, rgba(99, 102, 241, 0.22) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 80%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 30px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #a5b4fc;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 5.2vw, 56px);
+      font-weight: 850;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin-bottom: 18px;
+      color: #ffffff;
+    }
+
+    .hero-title-gradient {
+      background: linear-gradient(135deg, #818cf8 0%, #38bdf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 760px;
+      margin: 0 auto 36px;
+    }
+
+    /* Key Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .metric-card {
+      background: rgba(19, 30, 61, 0.6);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: left;
+      backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .metric-card:hover {
+      border-color: var(--line-bright);
+      transform: translateY(-2px);
+      background: rgba(19, 30, 61, 0.9);
+      box-shadow: var(--shadow-md);
+    }
+
+    .metric-value {
+      font-size: 32px;
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .metric-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .val-accent { color: #818cf8; }
+    .val-cyan { color: #38bdf8; }
+    .val-emerald { color: #34d399; }
+    .val-amber { color: #fbbf24; }
+
+    /* Controls Bar: Search & Filters */
+    .controls-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .search-row {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-darker);
+      border: 1px solid var(--line-bright);
+      border-radius: var(--radius-md);
+      padding: 15px 50px 15px 48px;
+      font-size: 15.5px;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-light);
+      box-shadow: 0 0 0 4px var(--accent-glow);
+    }
+
+    .search-input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .search-kbd-hint {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      background: var(--surface-card);
+      border: 1px solid var(--line-bright);
+      padding: 2px 7px;
+      border-radius: 4px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* Filter Row */
+    .filters-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pills-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-right: 4px;
+    }
+
+    .filter-pill {
+      padding: 7px 14px;
+      background: var(--bg-darker);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      user-select: none;
+    }
+
+    .filter-pill:hover {
+      background: var(--surface-card);
+      color: var(--text);
+      border-color: var(--line-bright);
+    }
+
+    .filter-pill.active {
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+      border-color: #6366f1;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.35);
+    }
+
+    .view-mode-toggle {
+      display: flex;
+      background: var(--bg-darker);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .view-btn {
+      padding: 6px 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .view-btn.active {
+      background: var(--surface-card);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Section Headings */
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-count {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dim);
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      padding: 2px 9px;
+      border-radius: 12px;
+    }
+
+    /* Track Cards Grid */
+    .tracks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .track-card {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .track-card:hover {
+      background: var(--surface-card-hover);
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+    }
+
+    .track-card-top {
+      margin-bottom: 20px;
+    }
+
+    .track-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .track-category {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #a5b4fc;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .track-complete-check {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-dim);
+      user-select: none;
+      padding: 3px 8px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .track-complete-check:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    .track-complete-check input {
+      accent-color: var(--emerald);
+      cursor: pointer;
+    }
+
+    .track-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .track-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .track-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .track-chip {
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-darker);
+      border: 1px solid var(--line);
+      color: var(--text-muted);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Modules List inside Track Card */
+    .track-modules {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .module-link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      text-decoration: none !important;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--text) !important;
+    }
+
+    .module-link-btn:hover {
+      border-color: var(--accent-light);
+      background: var(--surface-elevated);
+      transform: translateX(3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .module-link-btn.btn-guide {
+      border-left: 3px solid #6366f1;
+    }
+
+    .module-link-btn.btn-quiz {
+      border-left: 3px solid #10b981;
+    }
+
+    .module-link-btn.btn-atlas {
+      border-left: 3px solid #06b6d4;
+    }
+
+    .module-btn-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .module-btn-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--bg-darker);
+      color: var(--text-muted);
+      border: 1px solid var(--line);
+      white-space: nowrap;
+    }
+
+    .module-btn-arrow {
+      font-size: 15px;
+      color: var(--text-dim);
+      transition: transform 0.2s ease;
+    }
+
+    .module-link-btn:hover .module-btn-arrow {
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
+    /* Study Pathways Section */
+    .pathways-section {
+      margin-bottom: 60px;
+    }
+
+    .pathways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pathway-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .pathway-card:hover {
+      border-color: var(--line-bright);
+      background: var(--surface-card);
+      transform: translateY(-2px);
+    }
+
+    .pathway-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .pathway-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .pathway-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .pathway-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .pathway-step {
+      font-size: 12.5px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pathway-step-num {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--surface-card);
+      border: 1px solid var(--line-bright);
+      color: var(--accent-light);
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Matrix Table View */
+    .matrix-section {
+      margin-bottom: 60px;
+    }
+
+    .matrix-table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    table.matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    table.matrix-table th {
+      background: var(--bg-darker);
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    table.matrix-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+
+    table.matrix-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.matrix-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .table-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: #93c5fd;
+    }
+
+    .table-link:hover {
+      color: #bfdbfe;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .hub-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      background: var(--bg-darker);
+      padding: 40px 0;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1050px) {
+      .tracks-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .pathways-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .hero-title {
+        font-size: 32px;
+      }
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      .controls-panel {
+        padding: 16px;
+      }
+      .track-card {
+        padding: 20px;
+      }
+      .hub-header-actions .hub-quick-nav-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hub Header -->
+  <header class="hub-header">
+    <div class="container hub-header-inner">
+      <a href="index.html" class="hub-logo">
+        <div class="hub-logo-icon">🚀</div>
+        <div class="hub-logo-text">
+          <span class="hub-logo-title">Engineering Learning Hub</span>
+          <span class="hub-logo-sub">16 Interactive Guides & Quizzes</span>
+        </div>
+      </a>
+      <div class="hub-header-actions">
+        <button type="button" class="hub-quick-nav-btn" id="openTracksBtn">
+          <span>🧭</span> Quick Navigator <span class="sln-kbd" style="margin-left: 4px;">Ctrl+K</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>100% Offline-Ready · Verified Complete Edition</span>
+        </div>
+        <h1 class="hero-title">
+          Master the Engineering Interview with <span class="hero-title-gradient">Illustrated Depth</span>
+        </h1>
+        <p class="hero-desc">
+          800+ explained questions with production code, 650+ interactive quiz questions, and 100+ architectural diagrams. Choose your track, study the mechanics, and test your judgment.
+        </p>
+
+        <!-- Metrics Overview -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value val-accent">8</div>
+            <div class="metric-label">Specialized Engineering Tracks</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value val-cyan">16</div>
+            <div class="metric-label">Complete Guides & Quizzes</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value val-emerald">800+</div>
+            <div class="metric-label">Explained Study Questions</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value val-amber">100+</div>
+            <div class="metric-label">Architectural Flow Diagrams</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Panel: Search & Filters -->
+    <section class="controls-panel" id="controlsSection">
+      <div class="search-row">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          id="hubSearchInput"
+          class="search-input"
+          placeholder="Search topics, questions, technologies (e.g. Node.js, React 19, RAG, Kafka, Event Loop)..."
+          autocomplete="off"
+        />
+        <span class="search-kbd-hint">Press / to search</span>
+      </div>
+
+      <div class="filters-row">
+        <div class="filter-pills-group">
+          <span class="filter-label">Filter:</span>
+          <button type="button" class="filter-pill active" data-filter="all">All Modules (16)</button>
+          <button type="button" class="filter-pill" data-filter="guide">📖 Study Guides (8)</button>
+          <button type="button" class="filter-pill" data-filter="quiz">📝 Quizzes (7)</button>
+          <button type="button" class="filter-pill" data-filter="atlas">🗺️ Visual Atlas (1)</button>
+        </div>
+        <div class="filter-pills-group">
+          <span class="filter-label">Track:</span>
+          <button type="button" class="filter-pill active" data-topic="all">All Tracks</button>
+          <button type="button" class="filter-pill" data-topic="fullstack">Full-Stack</button>
+          <button type="button" class="filter-pill" data-topic="ai">AI / ML</button>
+          <button type="button" class="filter-pill" data-topic="nodejs">Node.js</button>
+          <button type="button" class="filter-pill" data-topic="react">React</button>
+          <button type="button" class="filter-pill" data-topic="javascript">JavaScript</button>
+          <button type="button" class="filter-pill" data-topic="devops">Backend & DevOps</button>
+          <button type="button" class="filter-pill" data-topic="system_design">System Design</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracks & Modules Grid -->
+    <section class="tracks-section" id="tracksSection">
+      <div class="section-head">
+        <h2 class="section-title">
+          <span>📚</span> Engineering Learning Tracks
+        </h2>
+        <span class="section-count" id="visibleTracksCount">8 Tracks Visible</span>
+      </div>
+
+      <div class="tracks-grid" id="tracksContainer">
+
+        <!-- 1. Full-Stack Interview -->
+        <article class="track-card" data-topic="fullstack" data-keywords="fullstack nodejs react devops system design 120 questions mock exam">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">🌐 Full-Stack Track</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="fullstack" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">Full-Stack Engineering Field Guide</h3>
+            <p class="track-desc">
+              Curated across Node.js, React, DevOps delivery pipelines, and scenario-based system design. 120 production-tested answers, 8 flow diagrams, and a companion 100-question timed mock exam.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">Node.js</span>
+              <span class="track-chip">React 19</span>
+              <span class="track-chip">DevOps & CI/CD</span>
+              <span class="track-chip">Distributed Systems</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="Interview_Study_Guide.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>The Full-Stack Interview Field Guide</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">120 Answers · 8 Visuals</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="Interview_Quiz_100.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>The 100-Question Interview Challenge</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions · 4 Tracks</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. Artificial Intelligence & LLMs -->
+        <article class="track-card" data-topic="ai" data-keywords="ai llm machine learning rag fine-tuning prompt engineering agents transformers vector database">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">🤖 AI & LLM Systems</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="ai" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">AI & Large Language Models Lab</h3>
+            <p class="track-desc">
+              State-of-the-art AI engineering concepts: RAG architectures, prompt techniques, fine-tuning, embeddings, vector indexing, evaluation benchmarks, and production agent patterns.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">LLM Architectures</span>
+              <span class="track-chip">RAG & Retrieval</span>
+              <span class="track-chip">Fine-Tuning</span>
+              <span class="track-chip">Autonomous Agents</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="ai_interview_guide.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>AI Interview Lab: 100 Illustrated Answers</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Illustrated Answers</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="ai_interview_quiz_100.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>AI 100-Question Quiz with Explanations</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions · Illustrated</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. Node.js Runtime -->
+        <article class="track-card" data-topic="nodejs" data-keywords="nodejs event loop libuv streams worker threads buffers asynchronous io performance memory leak">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">🟢 Node.js Systems</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="nodejs" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">Node.js Runtime & Scalable Architecture</h3>
+            <p class="track-desc">
+              Deep dive into Node.js internals: Libuv, Event Loop microtask checkpoints, stream backpressure, native buffers, Worker Threads, clustering, memory leak debugging, and high-throughput networking.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">Event Loop & Libuv</span>
+              <span class="track-chip">Streams & Backpressure</span>
+              <span class="track-chip">Worker Threads</span>
+              <span class="track-chip">Memory & Diagnostic</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="nodejs_interview_guide.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>Node.js Illustrated Guide (100 Qs + 37 Diagrams)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Qs + 37 Diagrams</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="nodejs_100_question_quiz.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>Node.js 100-Question Practice & Mock Quiz</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions · Illustrated</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="nodejs_visual_atlas.html" class="module-link-btn btn-atlas">
+              <div class="module-btn-left">
+                <span>🗺️</span>
+                <span>Node.js Visual Index: 37 Architecture Diagrams</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">37 Diagram Visual Atlas</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. React 19 -->
+        <article class="track-card" data-topic="react" data-keywords="react react 19 hooks compiler server components hydration concurrent suspense fiber reconciler state">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">⚛️ React 19 Architecture</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="react" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">React 19 & Frontend Architecture</h3>
+            <p class="track-desc">
+              Master the modern React paradigm: React 19.3 features, Compiler fundamentals, React Server Components (RSC), Transitions, Actions, Activity, Effect Events, reconciliation mechanics, and state patterns.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">React 19.3</span>
+              <span class="track-chip">React Compiler</span>
+              <span class="track-chip">Transitions & Actions</span>
+              <span class="track-chip">Fiber Reconciler</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="react_interview_guide.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>React Interview Lab: Illustrated Study Guide</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions · React 19</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="react_interview_quiz.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>React 100-Question Illustrated Challenge</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions · Illustrated</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. Senior JavaScript Core -->
+        <article class="track-card" data-topic="javascript" data-keywords="javascript ecmascript closures prototypes event loop promises v8 garbage collection memory async">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">💛 JavaScript Core</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="javascript" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">Senior JavaScript Engine & Core Semantics</h3>
+            <p class="track-desc">
+              Defend architectural decisions in JavaScript: closures, prototype chains, execution contexts, V8 hidden classes, JIT optimization, memory management, garbage collection heuristics, and asynchronous execution.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">Execution Contexts</span>
+              <span class="track-chip">Prototype Chain</span>
+              <span class="track-chip">V8 Internal Mechanics</span>
+              <span class="track-chip">Async / Await / Microtasks</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="senior_javascript_study_guide.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>Senior JS: 100 Questions & Answers with Depth</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 In-Depth Q&As</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="senior_javascript_quiz_100.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>Senior JavaScript 100-Question Quiz</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions Practice</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. Senior Frontend Engineering -->
+        <article class="track-card" data-topic="frontend" data-keywords="frontend web performance dom css rendering core web vitals security accessibility bundle">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">🎨 Senior Frontend</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="frontend" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">Senior Frontend Engineering Lab</h3>
+            <p class="track-desc">
+              High-performance client-side engineering: Core Web Vitals (INP, LCP, CLS), browser rendering pipeline, layout thrashing, DOM optimization, modern CSS architecture, security (CSP, CORS, XSS), and coding problems.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">Core Web Vitals</span>
+              <span class="track-chip">Browser Rendering Pipeline</span>
+              <span class="track-chip">Frontend Security</span>
+              <span class="track-chip">Coding Solutions</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="senior_frontend_interview_100.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖 📝</span>
+                <span>Senior Frontend Lab: 100 Questions + Coding + Quiz</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">All-in-One Guide & Quiz</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 7. Senior Backend & DevOps -->
+        <article class="track-card" data-topic="devops" data-keywords="backend devops kubernetes docker terraform gitops ci cd dora observability tracing prometheus security slsa">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">⚙️ Backend & DevOps</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="devops" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">Illustrated Senior Backend & DevOps</h3>
+            <p class="track-desc">
+              Production infrastructure and backend systems: 50 illustrated architectural flows, Kubernetes controllers, GitOps reconciliation, SLSA supply-chain security, OpenTelemetry tracing, and DORA deployment metrics.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">Kubernetes & Containers</span>
+              <span class="track-chip">GitOps & Supply Chain</span>
+              <span class="track-chip">Observability & OTel</span>
+              <span class="track-chip">DORA Metrics</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="senior_backend_devops_study_guide_illustrated.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>Senior Backend & DevOps (100 Answers + 50 Diagrams)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Answers + 50 Diagrams</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="senior_backend_devops_quiz_illustrated.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>Senior Backend & DevOps 100-Question Quiz</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">100 Questions · Illustrated</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- 8. System Design -->
+        <article class="track-card" data-topic="system_design" data-keywords="system design scalability caching sharding replication consensus cap theorem kafka redis sql nosql">
+          <div class="track-card-top">
+            <div class="track-badge-row">
+              <span class="track-category">📐 System Design</span>
+              <label class="track-complete-check">
+                <input type="checkbox" data-track-id="system_design" class="track-checkbox">
+                <span>Mastered</span>
+              </label>
+            </div>
+            <h3 class="track-title">System Design & Distributed Architectures</h3>
+            <p class="track-desc">
+              Architecting high-scale distributed systems: CAP theorem trade-offs, consensus algorithms, database sharding & read replicas, cache-aside strategies, message queues, rate limiters, and real-time streaming architectures.
+            </p>
+            <div class="track-chips">
+              <span class="track-chip">Scalability & Sharding</span>
+              <span class="track-chip">Cache & Database Strategies</span>
+              <span class="track-chip">Event Streaming & Queues</span>
+              <span class="track-chip">Consensus & Consistency</span>
+            </div>
+          </div>
+          <div class="track-modules">
+            <a href="system_design_guide.html" class="module-link-btn btn-guide">
+              <div class="module-btn-left">
+                <span>📖</span>
+                <span>System Design Field Guide (80 Scenarios & Visuals)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">80 Questions & Flows</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+            <a href="system_design_quiz.html" class="module-link-btn btn-quiz">
+              <div class="module-btn-left">
+                <span>📝</span>
+                <span>System Design 50-Question Practice Quiz</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="module-btn-badge">50 Questions · Scenarios</span>
+                <span class="module-btn-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Curated Study Pathways -->
+    <section class="pathways-section">
+      <div class="section-head">
+        <h2 class="section-title">
+          <span>🎯</span> Recommended Study Pathways
+        </h2>
+      </div>
+
+      <div class="pathways-grid">
+        <div class="pathway-card">
+          <div class="pathway-icon">⚡</div>
+          <h3 class="pathway-name">Full-Stack Lead Path</h3>
+          <p class="pathway-desc">Comprehensive progression for full-stack leads balancing modern frontend, performant services, and scalable architecture.</p>
+          <div class="pathway-steps">
+            <div class="pathway-step"><span class="pathway-step-num">1</span> <span>Full-Stack Field Guide (120 Qs)</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">2</span> <span>Node.js Guide & Visual Atlas</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">3</span> <span>React 19 & Architecture</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">4</span> <span>System Design 80 Qs & Flows</span></div>
+          </div>
+          <a href="Interview_Study_Guide.html" class="module-link-btn btn-guide">Start Full-Stack Path →</a>
+        </div>
+
+        <div class="pathway-card">
+          <div class="pathway-icon">🎨</div>
+          <h3 class="pathway-name">Senior Frontend Master</h3>
+          <p class="pathway-desc">Deep mastery of client-side engineering, execution engines, Web Vitals, and modern framework lifecycles.</p>
+          <div class="pathway-steps">
+            <div class="pathway-step"><span class="pathway-step-num">1</span> <span>Senior JavaScript Core (100 Qs)</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">2</span> <span>Senior Frontend Lab (100 Qs)</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">3</span> <span>React 19 Illustrated Guide</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">4</span> <span>React 100-Question Challenge</span></div>
+          </div>
+          <a href="senior_javascript_study_guide.html" class="module-link-btn btn-guide">Start Frontend Path →</a>
+        </div>
+
+        <div class="pathway-card">
+          <div class="pathway-icon">☁️</div>
+          <h3 class="pathway-name">Cloud & Backend Architect</h3>
+          <p class="pathway-desc">Designed for engineers building reliable, fault-tolerant distributed platforms and automated delivery pipelines.</p>
+          <div class="pathway-steps">
+            <div class="pathway-step"><span class="pathway-step-num">1</span> <span>Node.js Runtime Guide (37 Diagrams)</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">2</span> <span>Senior Backend & DevOps (50 Diagrams)</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">3</span> <span>System Design Guide & Scenarios</span></div>
+            <div class="pathway-step"><span class="pathway-step-num">4</span> <span>Backend & DevOps Mock Quiz</span></div>
+          </div>
+          <a href="senior_backend_devops_study_guide_illustrated.html" class="module-link-btn btn-guide">Start Backend Path →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Matrix View -->
+    <section class="matrix-section">
+      <div class="section-head">
+        <h2 class="section-title">
+          <span>📋</span> Complete File & Track Matrix
+        </h2>
+      </div>
+
+      <div class="matrix-table-wrap">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Domain Track</th>
+              <th>Study Guide</th>
+              <th>Interactive Quiz</th>
+              <th>Visual Atlas</th>
+              <th>Questions & Assets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Full-Stack Interview</strong></td>
+              <td><a href="Interview_Study_Guide.html" class="table-link">📖 Interview_Study_Guide.html</a></td>
+              <td><a href="Interview_Quiz_100.html" class="table-link">📝 Interview_Quiz_100.html</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>120 Guide Qs · 100 Quiz Qs · 8 Diagrams</td>
+            </tr>
+            <tr>
+              <td><strong>Artificial Intelligence & LLMs</strong></td>
+              <td><a href="ai_interview_guide.html" class="table-link">📖 ai_interview_guide.html</a></td>
+              <td><a href="ai_interview_quiz_100.html" class="table-link">📝 ai_interview_quiz_100.html</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>100 Guide Qs · 100 Quiz Qs · Illustrated</td>
+            </tr>
+            <tr>
+              <td><strong>Node.js Systems</strong></td>
+              <td><a href="nodejs_interview_guide.html" class="table-link">📖 nodejs_interview_guide.html</a></td>
+              <td><a href="nodejs_100_question_quiz.html" class="table-link">📝 nodejs_100_question_quiz.html</a></td>
+              <td><a href="nodejs_visual_atlas.html" class="table-link">🗺️ nodejs_visual_atlas.html</a></td>
+              <td>100 Guide Qs · 100 Quiz Qs · 37 Diagrams</td>
+            </tr>
+            <tr>
+              <td><strong>React 19 & Architecture</strong></td>
+              <td><a href="react_interview_guide.html" class="table-link">📖 react_interview_guide.html</a></td>
+              <td><a href="react_interview_quiz.html" class="table-link">📝 react_interview_quiz.html</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>100 Guide Qs · 100 Quiz Qs · React 19.3</td>
+            </tr>
+            <tr>
+              <td><strong>Senior JavaScript Core</strong></td>
+              <td><a href="senior_javascript_study_guide.html" class="table-link">📖 senior_javascript_study_guide.html</a></td>
+              <td><a href="senior_javascript_quiz_100.html" class="table-link">📝 senior_javascript_quiz_100.html</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>100 Guide Qs · 100 Quiz Qs · Core</td>
+            </tr>
+            <tr>
+              <td><strong>Senior Frontend Engineering</strong></td>
+              <td><a href="senior_frontend_interview_100.html" class="table-link">📖 senior_frontend_interview_100.html</a></td>
+              <td><a href="senior_frontend_interview_100.html" class="table-link">📝 Built-in Quiz Engine</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>100 Questions + 6 Coding Solutions</td>
+            </tr>
+            <tr>
+              <td><strong>Senior Backend & DevOps</strong></td>
+              <td><a href="senior_backend_devops_study_guide_illustrated.html" class="table-link">📖 senior_backend_devops_study_guide_illustrated.html</a></td>
+              <td><a href="senior_backend_devops_quiz_illustrated.html" class="table-link">📝 senior_backend_devops_quiz_illustrated.html</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>100 Answers · 100 Quiz Qs · 50 Diagrams</td>
+            </tr>
+            <tr>
+              <td><strong>System Design & Distributed Systems</strong></td>
+              <td><a href="system_design_guide.html" class="table-link">📖 system_design_guide.html</a></td>
+              <td><a href="system_design_quiz.html" class="table-link">📝 system_design_quiz.html</a></td>
+              <td><span style="color: var(--text-dim);">-</span></td>
+              <td>80 Scenario Qs · 50 Quiz Qs · Flows</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="hub-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>Engineering Interview Learning Hub</strong>
+        <span>16 Offline-Ready HTML Modules · 800+ Questions · 650+ Quiz Questions · 100+ Diagrams</span>
+      </div>
+      <div class="footer-right">
+        <span>Press <kbd class="sln-kbd">Ctrl+K</kbd> to open track navigator from any page</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site-nav.js"></script>
+  <script>
+    // Search and Filtering Logic
+    (function () {
+      const searchInput = document.getElementById('hubSearchInput');
+      const filterPills = document.querySelectorAll('[data-filter]');
+      const topicPills = document.querySelectorAll('[data-topic]');
+      const trackCards = document.querySelectorAll('.track-card');
+      const visibleCountEl = document.getElementById('visibleTracksCount');
+      const openTracksBtn = document.getElementById('openTracksBtn');
+
+      let currentFormat = 'all';
+      let currentTopic = 'all';
+      let currentQuery = '';
+
+      function applyFilters() {
+        let visibleCount = 0;
+
+        trackCards.forEach(card => {
+          const topic = card.getAttribute('data-topic');
+          const keywords = (card.getAttribute('data-keywords') + ' ' + card.innerText).toLowerCase();
+          const matchTopic = currentTopic === 'all' || topic === currentTopic;
+          const matchQuery = !currentQuery || keywords.includes(currentQuery);
+
+          // Handle format filtering inside card
+          const guideLinks = card.querySelectorAll('.btn-guide');
+          const quizLinks = card.querySelectorAll('.btn-quiz');
+          const atlasLinks = card.querySelectorAll('.btn-atlas');
+
+          let hasMatchingFormat = false;
+          if (currentFormat === 'all') {
+            hasMatchingFormat = true;
+            guideLinks.forEach(el => el.style.display = 'flex');
+            quizLinks.forEach(el => el.style.display = 'flex');
+            atlasLinks.forEach(el => el.style.display = 'flex');
+          } else if (currentFormat === 'guide') {
+            hasMatchingFormat = guideLinks.length > 0;
+            guideLinks.forEach(el => el.style.display = 'flex');
+            quizLinks.forEach(el => el.style.display = 'none');
+            atlasLinks.forEach(el => el.style.display = 'none');
+          } else if (currentFormat === 'quiz') {
+            hasMatchingFormat = quizLinks.length > 0;
+            guideLinks.forEach(el => el.style.display = 'none');
+            quizLinks.forEach(el => el.style.display = 'flex');
+            atlasLinks.forEach(el => el.style.display = 'none');
+          } else if (currentFormat === 'atlas') {
+            hasMatchingFormat = atlasLinks.length > 0;
+            guideLinks.forEach(el => el.style.display = 'none');
+            quizLinks.forEach(el => el.style.display = 'none');
+            atlasLinks.forEach(el => el.style.display = 'flex');
+          }
+
+          const shouldShow = matchTopic && matchQuery && hasMatchingFormat;
+          card.style.display = shouldShow ? 'flex' : 'none';
+          if (shouldShow) visibleCount++;
+        });
+
+        visibleCountEl.textContent = `${visibleCount} Track${visibleCount === 1 ? '' : 's'} Visible`;
+      }
+
+      // Search input
+      searchInput.addEventListener('input', (e) => {
+        currentQuery = e.target.value.toLowerCase().trim();
+        applyFilters();
+      });
+
+      // Keyboard shortcut '/' to search
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+        }
+      });
+
+      // Format filter pills
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          filterPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentFormat = pill.getAttribute('data-filter');
+          applyFilters();
+        });
+      });
+
+      // Topic filter pills
+      topicPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          topicPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentTopic = pill.getAttribute('data-topic');
+          applyFilters();
+        });
+      });
+
+      // Track switcher modal button in header
+      if (openTracksBtn) {
+        openTracksBtn.addEventListener('click', () => {
+          const modal = document.getElementById('slnModalOverlay');
+          if (modal) {
+            modal.classList.add('sln-open');
+            const search = document.getElementById('slnSearchInput');
+            setTimeout(() => search && search.focus(), 50);
+          }
+        });
+      }
+
+      // Track completion state storage
+      const checkboxes = document.querySelectorAll('.track-checkbox');
+      const STORAGE_KEY = 'learning_hub_mastered_tracks_v1';
+      let mastered = [];
+      try {
+        mastered = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      } catch (err) {}
+
+      checkboxes.forEach(cb => {
+        const id = cb.getAttribute('data-track-id');
+        if (mastered.includes(id)) {
+          cb.checked = true;
+          const card = cb.closest('.track-card');
+          if (card) card.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+        }
+
+        cb.addEventListener('change', () => {
+          const card = cb.closest('.track-card');
+          if (cb.checked) {
+            if (!mastered.includes(id)) mastered.push(id);
+            if (card) card.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+          } else {
+            mastered = mastered.filter(x => x !== id);
+            if (card) card.style.borderColor = '';
+          }
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(mastered));
+          } catch (err) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
