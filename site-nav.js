@@ -13,7 +13,8 @@
       items: [
         { title: '120-Question Field Guide', file: 'Interview_Study_Guide.html', type: 'guide', badge: '120 Qs · 8 Diagrams' },
         { title: '100-Question Practice Quiz', file: 'Interview_Quiz_100.html', type: 'quiz', badge: '100 Qs · 4 Tracks' },
-        { title: 'Senior Fullstack Visual Labs', file: 'fullstack_interview_visual_guide.html', type: 'atlas', badge: '72 Qs · 6 Visual Labs' }
+        { title: 'Senior Fullstack Visual Labs', file: 'fullstack_interview_visual_guide.html', type: 'atlas', badge: '72 Qs · 6 Visual Labs' },
+        { title: '120 Visual Scenarios & Labs', file: 'scenario-fullstack-120-question.html', type: 'guide', badge: '120 Scenarios · 8 Labs' }
       ]
     },
     {

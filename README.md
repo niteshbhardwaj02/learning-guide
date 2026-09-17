@@ -1,6 +1,6 @@
 # 🚀 Engineering Interview Learning Hub
 
-> **8 Specialized Tracks · 17 Comprehensive Guides & Quizzes · 870+ Explained Answers · 650+ Interactive Quiz Questions · 100+ Architectural Flow Diagrams · 6 Visual Labs · 100% Offline-Ready**
+> **8 Specialized Tracks · 18 Comprehensive Guides & Quizzes · 990+ Explained Answers · 650+ Interactive Quiz Questions · 220+ Architectural Flow Diagrams · 14 Visual Labs · 100% Offline-Ready**
 
 Welcome to the **Engineering Interview Learning Hub**, an offline-first repository of in-depth study guides, scenario-based design workbooks, and interactive practice/mock assessment quizzes designed for senior software engineers, technical leads, and distributed systems architects.
 
@@ -10,7 +10,7 @@ Welcome to the **Engineering Interview Learning Hub**, an offline-first reposito
 
 | Domain Track | 📖 Study Guide | 📝 Interactive Quiz | 🗺️ Visual Atlas | Scope & Assets |
 |---|---|---|---|---|
-| **🌐 Full-Stack Interview** | [Interview_Study_Guide.html](Interview_Study_Guide.html) | [Interview_Quiz_100.html](Interview_Quiz_100.html) | [fullstack_interview_visual_guide.html](fullstack_interview_visual_guide.html) | 120 Guide Qs · 100 Quiz Qs · 72 Lab Qs · 6 Visual Labs |
+| **🌐 Full-Stack Interview** | [Interview_Study_Guide.html](Interview_Study_Guide.html)<br>[scenario-fullstack-120-question.html](scenario-fullstack-120-question.html) | [Interview_Quiz_100.html](Interview_Quiz_100.html) | [fullstack_interview_visual_guide.html](fullstack_interview_visual_guide.html) | 240 Guide Qs · 100 Quiz Qs · 72 Lab Qs · 14 Visual Labs |
 | **🤖 AI & LLM Systems** | [ai_interview_guide.html](ai_interview_guide.html) | [ai_interview_quiz_100.html](ai_interview_quiz_100.html) | *Embedded in guide* | 100 Guide Qs · 100 Quiz Qs · Architectures |
 | **🟢 Node.js Systems** | [nodejs_interview_guide.html](nodejs_interview_guide.html) | [nodejs_100_question_quiz.html](nodejs_100_question_quiz.html) | [nodejs_visual_atlas.html](nodejs_visual_atlas.html) | 100 Guide Qs · 100 Quiz Qs · 37 Diagrams |
 | **⚛️ React 19 Architecture** | [react_interview_guide.html](react_interview_guide.html) | [react_interview_quiz.html](react_interview_quiz.html) | *Embedded in guide* | 100 Guide Qs · 100 Quiz Qs · React 19.3 |
@@ -37,8 +37,7 @@ Open [index.html](index.html) in any browser to launch the central dashboard:
 Every guide and quiz includes the universal navigation bar (`site-nav.css` and `site-nav.js`):
 
 - **`⌂ Learning Hub`**: Instant link back to [index.html](index.html).
-- **Companion Switcher**: One-click jump between Study Guide (`📖`) and Quiz (`📝`).
-- **`📚 All Tracks ▾` Switcher**: Open a searchable drawer listing all 16 modules from any page.
+- **`📚 All Tracks ▾` Switcher**: Open a searchable drawer listing all 18 modules from any page.
 - **Keyboard Shortcuts**:
   - `Ctrl + K` (or `Cmd + K`): Open/close the quick track navigator from any page.
   - `/`: Focus search input in the Learning Hub dashboard or navigator.
@@ -92,9 +91,10 @@ python scripts/verify_links.py
 
 ### 1. Full-Stack Interview Track
 - **Guide**: [Interview_Study_Guide.html](Interview_Study_Guide.html) (120 Questions)
+- **Visual Scenarios & Labs**: [scenario-fullstack-120-question.html](scenario-fullstack-120-question.html) (120 Scenario Questions + 8 Interactive Labs + 120 Diagrams)
 - **Quiz**: [Interview_Quiz_100.html](Interview_Quiz_100.html) (100 Questions)
-- **Visual Labs**: [fullstack_interview_visual_guide.html](fullstack_interview_visual_guide.html) (72 Questions + 6 Interactive Labs)
-- **Key Focus**: Node.js event mechanics, React render-vs-commit lifecycles, stream backpressure, DORA metrics, OIDC, SLSA supply chain, interactive Event Loop simulator, RAG retrieval stages, and end-to-end request flows.
+- **Visual Labs & Field Guide**: [fullstack_interview_visual_guide.html](fullstack_interview_visual_guide.html) (72 Questions + 6 Interactive Labs)
+- **Key Focus**: Node.js event mechanics, React render-vs-commit lifecycles, stream backpressure, DORA metrics, OIDC, SLSA supply chain, interactive Event Loop simulator, RAG retrieval stages, full-stack visual scenarios across JS, React, Node, and Backend systems, and end-to-end request flows.
 
 ### 2. Artificial Intelligence & LLMs Track
 - **Guide**: [ai_interview_guide.html](ai_interview_guide.html) (100 Illustrated Answers)

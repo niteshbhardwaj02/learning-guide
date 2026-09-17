@@ -34,6 +34,7 @@ EXPECTED_MODULES = [
     "nodejs_visual_atlas.html",
     "react_interview_guide.html",
     "react_interview_quiz.html",
+    "scenario-fullstack-120-question.html",
     "senior_backend_devops_quiz_illustrated.html",
     "senior_backend_devops_study_guide_illustrated.html",
     "senior_frontend_interview_100.html",
@@ -65,7 +66,7 @@ def main():
             print(f"  [OK] {f} ({size:,} bytes)")
 
     # 2. Check Expected Modules
-    print("\n[2/4] Checking 16 learning guide/quiz modules...")
+    print(f"\n[2/4] Checking {len(EXPECTED_MODULES)} learning guide/quiz modules...")
     for f in EXPECTED_MODULES:
         if not os.path.isfile(f):
             errors.append(f"Missing expected learning module: {f}")
@@ -73,8 +74,8 @@ def main():
             size = os.path.getsize(f)
             print(f"  [OK] {f} ({size:,} bytes)")
 
-    # 3. Check that index.html references all 16 modules
-    print("\n[3/4] Verifying index.html references all 16 modules...")
+    # 3. Check that index.html references all modules
+    print(f"\n[3/4] Verifying index.html references all {len(EXPECTED_MODULES)} modules...")
     if os.path.isfile("index.html"):
         with open("index.html", "r", encoding="utf-8", errors="ignore") as fp:
             index_content = fp.read()
@@ -137,7 +138,7 @@ def main():
             print(f"    - {err}")
         sys.exit(1)
     else:
-        print("  ALL CHECKS PASSED: 0 broken links, all 16 modules verified!")
+        print(f"  ALL CHECKS PASSED: 0 broken links, all {len(EXPECTED_MODULES)} modules verified!")
         print("=" * 60)
         sys.exit(0)
 
