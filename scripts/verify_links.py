@@ -43,6 +43,8 @@ EXPECTED_MODULES = [
 ]
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(root_dir)
     print("=" * 60)
@@ -98,11 +100,12 @@ def main():
         matches = link_pattern.findall(content_no_scripts)
         for target in matches:
             target_clean = target.strip()
-            # Skip empty, anchors, external URLs, mailto, javascript, or template variables
+            # Skip empty, anchors, external URLs, mailto, javascript, data URIs, or template variables
             if (not target_clean or
                 target_clean.startswith("#") or
                 target_clean.startswith("javascript:") or
                 target_clean.startswith("mailto:") or
+                target_clean.startswith("data:") or
                 "${" in target_clean):
                 continue
             if (target_clean.startswith("http://") or
