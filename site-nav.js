@@ -23,7 +23,8 @@
       icon: '🤖',
       items: [
         { title: 'AI Illustrated Study Guide', file: 'ai_interview_guide.html', type: 'guide', badge: '100 Qs · Architecture' },
-        { title: 'AI 100-Question Quiz', file: 'ai_interview_quiz_100.html', type: 'quiz', badge: '100 Qs · Illustrated' }
+        { title: 'AI 100-Question Quiz', file: 'ai_interview_quiz_100.html', type: 'quiz', badge: '100 Qs · Illustrated' },
+        { title: 'AI for Node.js Backends', file: 'AI_for_Nodejs_Complete_Guide.html', type: 'guide', badge: '30 Ch · 7 Labs · Starter' }
       ]
     },
     {
@@ -42,7 +43,9 @@
       icon: '⚛️',
       items: [
         { title: 'React 19 Illustrated Guide', file: 'react_interview_guide.html', type: 'guide', badge: '100 Qs · React 19.3' },
-        { title: 'React 100-Question Quiz', file: 'react_interview_quiz.html', type: 'quiz', badge: '100 Qs · Illustrated' }
+        { title: 'React 100-Question Quiz', file: 'react_interview_quiz.html', type: 'quiz', badge: '100 Qs · Illustrated' },
+        { title: 'React Intermediate & Advanced Guide', file: 'react_intermediate_advanced_guide.html', type: 'guide', badge: '48 Lessons · 19 Hooks · 60 Qs' },
+        { title: 'React Advanced Hooks & Labs Guide', file: 'React_Intermediate_Advanced_Guide(1).html', type: 'atlas', badge: '47 Lessons · 4 Labs · 80 Qs' }
       ]
     },
     {

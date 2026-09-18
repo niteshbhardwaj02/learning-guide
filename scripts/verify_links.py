@@ -24,8 +24,10 @@ REQUIRED_ROOT_FILES = [
 ]
 
 EXPECTED_MODULES = [
+    "AI_for_Nodejs_Complete_Guide.html",
     "Interview_Quiz_100.html",
     "Interview_Study_Guide.html",
+    "React_Intermediate_Advanced_Guide(1).html",
     "ai_interview_guide.html",
     "ai_interview_quiz_100.html",
     "frontend_interview_atlas_150.html",
@@ -33,6 +35,7 @@ EXPECTED_MODULES = [
     "nodejs_100_question_quiz.html",
     "nodejs_interview_guide.html",
     "nodejs_visual_atlas.html",
+    "react_intermediate_advanced_guide.html",
     "react_interview_guide.html",
     "react_interview_quiz.html",
     "scenario-fullstack-120-question.html",
